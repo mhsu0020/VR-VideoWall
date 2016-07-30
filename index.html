@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Reinventing Retail</title>
+        <style>
+            body {
+                font-family: Helvetica, Arial, sans-serif;
+                background: #000;
+                margin: 0;
+                overflow: hidden;
+            }
+
+            video {
+                display: none;
+                width: 1024;
+                height: 1024;
+                background: #000;
+            }
+
+            video.fullscreen {
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .meta {
+                display: none;
+                background: #000000;
+                padding: 20px 30px;
+                font-size: 20px;
+                color: #aaaaaa;
+                opacity: 0.8;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+            }
+
+            .meta strong {
+                color: #ffffff;
+                font-weight: normal;
+            }
+
+            .fullscreen-indicator {
+                display: none;
+                position: fixed;
+                bottom: -85px;
+                right: 0;
+                padding: 20px;
+                background: #000000;
+                opacity: 0.8;
+            }
+
+            .fullscreen-indicator canvas {
+                z-index: 10;
+            }
+
+            .icon-fullscreen {
+                display: none;
+                position: fixed;
+                bottom: 60px;
+                right: 60px;
+                z-index: 20;
+                width: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <video width="1024" height="1024"
+            src="videos/sample.mp4"
+            poster="videos/sample.jpg"
+            data-title="The Future of Customer Experience"
+            data-author="Blackberry UK" loop></video>
+
+        <video width="1024" height="1024"
+            src="videos/sample.mp4"
+            poster="videos/sample.jpg"
+            data-title="The Future of Shopping"
+            data-author="Cisco" loop></video>
+
+        <video width="1024" height="1024"
+            src="videos/sample.mp4"
+            poster="videos/sample.jpg"
+            data-title="Retailing in 2020"
+            data-author="Coca Cola Research" loop></video>
+
+        <video width="1024" height="1024"
+            src="videos/sample.mp4"
+            poster="videos/sample.jpg"
+            data-title="The Future of Retail"
+            data-author="Digital Dazzle" loop></video>
+
+        <video width="1024" height="1024"
+            src="videos/sample.mp4"
+            poster="videos/sample.jpg"
+            data-title="How We Will Shop"
+            data-author="Unknown" loop></video>
+
+        <video width="1024" height="1024"
+            src="videos/sample.mp4"
+            poster="videos/sample.jpg"
+            data-title="Concept of 2019"
+            data-author="Microsoft" loop></video>
+
+        <video width="1024" height="1024"
+            src="videos/sample.mp4"
+            poster="videos/sample.jpg"
+            data-title="The Experience Is Everything"
+            data-author="Motorola Solutions" loop></video> -->
+
+        <video width="1024" height="1024"
+            src="videos/sample.mp4"
+            controls autoplay
+            poster="videos/sample.jpg"
+            data-title="Productivity Future Vision"
+            data-author="Microsoft" loop></video>
+
+        <div class="meta">
+            <strong><span class="title"></span></strong> by <span class="author"></span>
+        </div>
+
+        <div class="fullscreen-indicator">
+            <input class="knob" data-width="120" data-bgColor="#333333" data-fgColor="#aa3333" data-skin="tron" data-thickness=".1" data-displayInput="false" value="0">
+        </div>
+
+        <img class="icon-fullscreen" src="fullscreen.svg">
+
+        <script src="js/three.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/carousel.js"></script>
+        <script src="js/jquery.knob.min.js"></script>
+        <script>
+            carousel = new Carousel(document.getElementsByTagName('video'));
+            carousel.setupScene();
+            carousel.animate();
+
+
+            $('.knob').knob();
+        </script>
+
+    </body>
+</html>
